@@ -1,3 +1,4 @@
+(() => {
 // Current features from https://dev.betterer.cc/changelog/ (2.0 and 2.1).
 const headlinePairs = [
   ['collection', 'covers'],
@@ -8,6 +9,8 @@ const headlinePairs = [
   ['custom', 'typography'],
 ];
 const flipLine = document.querySelector('.flip-line');
+// Keep the original text if the stylesheet is missing, stale, or unsupported.
+if (!flipLine || getComputedStyle(flipLine).display !== 'inline-grid') return;
 const headlineMotion = matchMedia('(prefers-reduced-motion: reduce)');
 let pairIndex = 0;
 let rotationTimer;
@@ -63,3 +66,5 @@ document.querySelector('.motion-control').addEventListener('click', syncHeadline
 document.addEventListener('visibilitychange', syncHeadlineMotion);
 headlineMotion.addEventListener('change', syncHeadlineMotion);
 scheduleRotation();
+
+})();
