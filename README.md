@@ -26,3 +26,5 @@ GitHub Pages can serve the repository root directly. All local paths are relativ
 - `/refined.html`: softer center blur and stronger scrim, smaller covers across six lanes, slower movement, stronger header fade, and a muted gray-purple headline. Includes a link back to the original.
 
 The refined page loads `refined.css` after the original stylesheet. Shared JavaScript defaults to the original five lanes unless a page explicitly requests a different count.
+
+The refined headline flips through paired feature labels every four seconds: collection covers, poster layouts, custom artwork, service logos, color palettes, and PNG downloads. These refer to shipped 2.0/2.1 features in Betterer's changelog. The shared motion control pauses the headline and poster wall. Reduced-motion users keep a static collection-covers heading; screen readers receive a stable heading rather than repeated announcements.
