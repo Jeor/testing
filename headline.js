@@ -5,7 +5,7 @@ const headlinePairs = [
   ['custom', 'artwork'],
   ['service', 'logos'],
   ['color', 'palettes'],
-  ['PNG', 'downloads'],
+  ['custom', 'typography'],
 ];
 const flipLine = document.querySelector('.flip-line');
 const headlineMotion = matchMedia('(prefers-reduced-motion: reduce)');
