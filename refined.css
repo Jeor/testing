@@ -1,0 +1,68 @@
+/* V2 overrides are isolated so the original page keeps its existing design. */
+:root {
+  --lavender: #bdb4cc;
+}
+
+.wall {
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+
+.lane {
+  animation-duration: calc(var(--duration, 100s) * 1.85);
+}
+
+.lane:nth-child(6) {
+  margin-top: -140px;
+}
+
+/* Blur only the center. The outer artwork remains crisp. */
+.shade::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  mask-image: radial-gradient(ellipse 48% 42% at 50% 48%, #000 12%, #000b 48%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 48% 42% at 50% 48%, #000 12%, #000b 48%, transparent 100%);
+}
+
+.shade {
+  background:
+    radial-gradient(ellipse 57% 48% at 50% 47%, #08090d 8%, #08090df5 35%, #08090db5 60%, #08090d20 88%, transparent 100%),
+    linear-gradient(180deg, #08090dfa 0%, #08090ddb 8%, #08090d44 21%, transparent 32%, transparent 73%, #08090ded 100%);
+}
+
+.footer-copy {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.compare-link {
+  font-size: 12px;
+  color: #bdb4cc;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 200ms;
+}
+
+.compare-link:hover {
+  color: #fff;
+}
+
+@media (max-width: 700px) {
+  .wall { gap: 16px; }
+  .shade {
+    background:
+      radial-gradient(ellipse 108% 42% at 50% 47%, #08090dfc 10%, #08090df0 40%, #08090da6 64%, transparent 100%),
+      linear-gradient(180deg, #08090dfa 0%, #08090dc9 9%, #08090d20 25%, #08090d10 72%, #08090ded 100%);
+  }
+  .shade::before {
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    mask-image: radial-gradient(ellipse 105% 40% at 50% 47%, #000 12%, #000a 48%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 105% 40% at 50% 47%, #000 12%, #000a 48%, transparent 100%);
+  }
+  .footer-copy { flex-direction: column; align-items: flex-start; gap: 10px; }
+}

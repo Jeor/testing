@@ -19,3 +19,10 @@ Cover artwork, logo, and Geist font were obtained from the supplied source site,
 ## Hosting
 
 GitHub Pages can serve the repository root directly. All local paths are relative and work under `/testing/`.
+
+## Compare versions
+
+- `/index.html` (or `/`): original animated redesign, preserved.
+- `/refined.html`: softer center blur and stronger scrim, smaller covers across six lanes, slower movement, stronger header fade, and a muted gray-purple headline. Includes a link back to the original.
+
+The refined page loads `refined.css` after the original stylesheet. Shared JavaScript defaults to the original five lanes unless a page explicitly requests a different count.

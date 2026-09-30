@@ -1,7 +1,7 @@
 const wall = document.querySelector('#wall');
 const covers = ['netflix', 'disney', 'hbo', 'prime', 'paramount', 'hulu', 'apple', 'peacock', 'crunchyroll', 'weekend'];
 // Two identical sets per lane make the transform loop seamless.
-for (let laneIndex = 0; laneIndex < 5; laneIndex++) {
+for (let laneIndex = 0; laneIndex < Number(document.body.dataset.lanes || 5); laneIndex++) {
   const lane = document.createElement('div');
   lane.className = 'lane';
   lane.style.setProperty('--duration', `${90 + laneIndex * 9}s`);
