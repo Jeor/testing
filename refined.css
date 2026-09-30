@@ -21,15 +21,15 @@
   content: '';
   position: absolute;
   inset: 0;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  mask-image: radial-gradient(ellipse 48% 42% at 50% 48%, #000 12%, #000b 48%, transparent 100%);
-  -webkit-mask-image: radial-gradient(ellipse 48% 42% at 50% 48%, #000 12%, #000b 48%, transparent 100%);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  mask-image: radial-gradient(ellipse 36% 28% at 50% 47%, #000 6%, #0008 35%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 36% 28% at 50% 47%, #000 6%, #0008 35%, transparent 100%);
 }
 
 .shade {
   background:
-    radial-gradient(ellipse 57% 48% at 50% 47%, #08090d 8%, #08090df5 35%, #08090db5 60%, #08090d20 88%, transparent 100%),
+    radial-gradient(ellipse 48% 37% at 50% 47%, #08090df5 8%, #08090ddd 35%, #08090d80 60%, #08090d10 88%, transparent 100%),
     linear-gradient(180deg, #08090dfa 0%, #08090ddb 8%, #08090d44 21%, transparent 32%, transparent 73%, #08090ded 100%);
 }
 
@@ -55,14 +55,14 @@
   .wall { gap: 16px; }
   .shade {
     background:
-      radial-gradient(ellipse 108% 42% at 50% 47%, #08090dfc 10%, #08090df0 40%, #08090da6 64%, transparent 100%),
+      radial-gradient(ellipse 95% 33% at 50% 47%, #08090df5 10%, #08090dd9 40%, #08090d80 64%, transparent 100%),
       linear-gradient(180deg, #08090dfa 0%, #08090dc9 9%, #08090d20 25%, #08090d10 72%, #08090ded 100%);
   }
   .shade::before {
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
-    mask-image: radial-gradient(ellipse 105% 40% at 50% 47%, #000 12%, #000a 48%, transparent 100%);
-    -webkit-mask-image: radial-gradient(ellipse 105% 40% at 50% 47%, #000 12%, #000a 48%, transparent 100%);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    mask-image: radial-gradient(ellipse 80% 27% at 50% 47%, #000 6%, #0006 35%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 27% at 50% 47%, #000 6%, #0006 35%, transparent 100%);
   }
   .footer-copy { flex-direction: column; align-items: flex-start; gap: 10px; }
 }
